@@ -1,0 +1,101 @@
+.banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 547px;
+    padding-top:68px;
+}
+.banner .informacao{
+    text-align: center;
+    color: #fff;
+}
+.banner .informacao h1{
+    font-size:90px;
+    font-weight: 700;
+}
+
+.banner .informacao h3{
+    font-size: 35px;
+    font-weight: 500;
+    margin-top:-50px ;
+    span{
+        font-size: 25px;
+    }
+   
+}
+.banner .informacao p{
+    background-color:rgba(218, 188, 20, 0.747);
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 18px;
+    border-radius: 20px;
+   padding: 5px 10px;
+}
+.banner .informacao h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+.banner .informacao span{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1020px) {
+    
+    .banner {
+        width: 100%;
+    }
+    .banner .informacao{
+        h1{
+            padding-top: 50px;
+            font-size: 60px;
+        }
+        h3{
+            margin-top:-20px;
+            font-size: 20px;
+            span{
+                font-size: 18px;
+            }
+        }
+        p{
+            font-size:13px;
+            width: 250px;
+        }
+        h4{
+            font-size:15px;
+        }
+        span{
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 568px){
+    .banner{
+        padding-top:5px;
+
+    }
+    .banner .informacao{
+        h1{
+            padding-top:10px;
+            font-size: 60px;
+        }
+        h3{
+            margin-top:-20px;
+            font-size: 20px;
+            span{
+                font-size: 18px;
+            }
+        }
+        p{
+            font-size:13px;
+            width: 250px;
+        }
+        h4{
+            font-size:15px;
+        }
+        span{
+            font-size: 13px;
+        }
+    }
+}

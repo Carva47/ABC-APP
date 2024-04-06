@@ -1,0 +1,22 @@
+.sectionCards{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-top:30px;
+}
+.sectionCards .cards{
+    margin:30px;
+    text-align: center;
+}
+.cardCircle img{
+    width:150px;
+    height:140px;
+    border-radius:50%;
+}
+
+@media screen and (max-width: 1020px) {   
+    .sectionCards{
+        flex-wrap: wrap;
+        flex-direction: row;
+    } 
+}
