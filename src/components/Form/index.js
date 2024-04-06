@@ -2,8 +2,6 @@ import styles from "./Register.module.css";
 import styls from "./Login.module.css";
 import userIcon from "./icons8-chamada-em-conferência-100.png";
 import passIcon from "./830718_preview-removebg-preview.png";
-import { Header } from '../Header/index';
-import { Buttons } from '../Button/index';
 import { Link } from 'react-router-dom';
 
 export function FormRegister() {
