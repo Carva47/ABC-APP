@@ -5,12 +5,12 @@ import { Buttons } from '../../components/Button/index';
 import { CardCircle } from '../../components/CardCicle/index';
 
 export function Home(){
-    return(
-       <>
-         <Header/>
-         <Banner image="mao"/>
-         <Buttons/>
-         <CardCircle/>         
-       </>
-    );
+  return(
+    <>
+      <Header/>
+      <Banner/>
+      <Buttons/>
+      <CardCircle/>         
+    </>
+  );
 }
