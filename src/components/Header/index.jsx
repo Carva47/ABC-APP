@@ -55,7 +55,7 @@ export function Header(){
                                     Login
                                 </Link>
                                 <Link className="hidden sm:block rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black">
-                                    Register
+                                    Registrar
                                 </Link>
                             </div>
                             <button className="block md:hidden rounded p-2 text-white transition hover:text-white/75">
