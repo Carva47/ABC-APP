@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from './pages/Home';
-import { Register } from './pages/Register';
-import { Login } from "./pages/Login";
-import { PageNotFound } from "./pages/PageNotFound";
+import { Home } from '../pages/Home';
+import { Register } from '../pages/Register';
+import { Login } from "../pages/Login";
+import { PageNotFound } from "../pages/PageNotFound";
 
 function AppRoutes() {
     return(

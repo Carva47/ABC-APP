@@ -51,10 +51,10 @@ export function Header(){
                         </ul>
                         <div className="flex items-center gap-4">
                             <div className="sm:flex sm:gap-4">
-                                <Link to="" className="border-0 px-5 py-2.5 text-sm font-medium text-white">
+                                <Link to="/login" className="border-0 px-5 py-2.5 text-sm font-medium text-white">
                                     Login
                                 </Link>
-                                <Link className="hidden sm:block rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black">
+                                <Link to="/register" className="hidden sm:block rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black">
                                     Registrar
                                 </Link>
                             </div>
