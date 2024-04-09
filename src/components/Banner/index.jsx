@@ -6,9 +6,9 @@ export function Banner(){
         <section style={{backgroundImage: `url('/images/mao.jpg')`}} class="bg-cover bg-no-repeat bg-fixed  h-screen relative overflow-hidden">
             <Shadow/>
             <div class="relative z-10 sm:px-6 lg:px-8 py-10 lg:py-16 h-full">
-                <div class="mt-[10%] max-w-2xl text-center mx-auto">
+                <div class="mt-[15%] max-w-2xl text-center mx-auto">
                     <p class="inline-block text-base font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-400 text-transparent">
-                        <strong className='font-bold'>ABC</strong>: A<span>NGOLA</span> B<span>USINESS</span> C<span>ONNECT</span>
+                        <strong className='font-extrabold'>ABC</strong> ANGOLA BUSINESS CONNECT
                     </p>
                     <h1 class="mt-5 max-w-2xl block font-semibold text-4xl md:text-5xl lg:text-6xl">
                         Conectando o mundo dos negócios
@@ -25,5 +25,5 @@ export function Banner(){
 }
 
 const Shadow = () =>  {
-    return <div class="flex absolute inset-0 bg-black/80"></div>
+    return <div class="flex absolute inset-0 bg-black/70"></div>
 }
