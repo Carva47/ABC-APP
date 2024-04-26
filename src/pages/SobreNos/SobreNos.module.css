@@ -1,0 +1,9 @@
+.containerPrincipal{
+    text-align: center;
+    padding: 50px;
+}
+.containerPrincipal img{
+    width:250px;
+    height:230px;
+    border-radius:12px;
+}

@@ -50,7 +50,7 @@ export function Home(){
             ))}
           </div>
           <div className='mt-12 text-center'>
-            <Link to="" class="inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition">
+            <Link to="" class="inline-block rounded bg-yellow-600 px-12 py-3 text-sm font-medium text-white transition">
               Ver mais
             </Link>
           </div>
