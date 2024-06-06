@@ -3,17 +3,22 @@ import { Home } from '../pages/Home';
 import { Register } from '../pages/Register';
 import { Login } from "../pages/Login";
 import { PageNotFound } from "../pages/PageNotFound";
-import AdminPainel from "../pages/Painel/AdminPainel";
-
+import { SobreNos } from "../pages/SobreNos";
+import { Faqs } from "../pages/FAQs";
+import { UserPage } from '../pages/UserPage/index';
+import { UserProfile } from '../pages/ProfileUser/index';
 
 function AppRoutes() {
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={ <Home /> }> </Route>
+                <Route path="/sobrenos" element={ <SobreNos/> }> </Route>
+                <Route path="/faqs" element={ <Faqs/> }> </Route>
                 <Route path="/register" element={ <Register /> }> </Route>
                 <Route path="/login" element={ < Login /> }> </Route>
-                <Route path="/paineladmin" element={ < AdminPainel /> }> </Route>
+                <Route path="/userpage" element={ < UserPage /> }> </Route>
+                <Route path="/profile" element={ < UserProfile /> }> </Route>
                 <Route path="*" element={ < PageNotFound /> }> </Route>
             </Routes>
         </BrowserRouter>

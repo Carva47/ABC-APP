@@ -42,7 +42,7 @@ export function Home(){
             {items.map((item,index)=>(
               <article key={index} class="block rounded-xl border border-gray-200 p-6 shadow-xl transition hover:cursor-pointer hover:border-blue-500/10 hover:shadow-blue-500/10">
                 <div className='w-fit p-4 bg-white border border-gray-200 rounded-full'>
-                  <item.icon class="size-7 text-blue-500/95"/>
+                  <item.icon class="size-7 text-slate-900/95"/>
                 </div>
                 <h2 class="mt-4 text-base font-bold text-zinc-600/80">{item.title}</h2>
                 <p class="mt-2 text-xs text-zinc-600/60 font-normal">{item.description}</p>
@@ -50,7 +50,7 @@ export function Home(){
             ))}
           </div>
           <div className='mt-12 text-center'>
-            <Link to="" class="inline-block rounded bg-yellow-600 px-12 py-3 text-sm font-medium text-white transition">
+            <Link to="" class="inline-block rounded bg-slate-900 px-12 py-3 text-sm font-medium text-white transition">
               Ver mais
             </Link>
           </div>
