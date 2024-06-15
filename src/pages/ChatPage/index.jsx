@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PrincipalPage } from '../../layout/principalPage';
-import ChatModal from './ChatModal'; // Importando o componente do modal
+import {ChatModal} from './ChatModal'; // Importando o componente do modal
 
 export function ChatsPage() {
   // Estado inicial das conversas

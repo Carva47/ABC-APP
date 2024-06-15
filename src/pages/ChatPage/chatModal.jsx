@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root'); // Definindo o elemento raiz para acessibilidade
 
-function ChatModal({ chat, onClose }) {
+export function ChatModal({ chat, onClose }) {
   if (!chat) return null;
 
   return (
