@@ -6,7 +6,7 @@ import styles from "./Register.module.css";
 export function Register() {
   return (
     <>
-    <section className={styles.containerLogin} style={{backgroundImage: `url('./images/umarvore.jpg')`}}>
+    <section className={styles.containerLogin}>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-gray-900  opacity-90 ">
       <div className="max-w-3xl mx-auto px-4 ">
          <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
@@ -183,7 +183,7 @@ export function Register() {
         </Link>
         <button
           type="submit"
-          className="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-bule-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Save
         </button>

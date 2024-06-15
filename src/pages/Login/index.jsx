@@ -6,7 +6,7 @@ import { Logo } from "../../components/logo";
 export function Login() {
     return (
       <>
-      <section className={styles.containerLogin} style={{backgroundImage: `url('./images/umarvore.jpg')`}}>
+      <section className={styles.containerLogin}>
        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-gray-900  opacity-90" >
         
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
@@ -61,7 +61,7 @@ export function Login() {
               <div>
                 <Link to={"/userpage"}
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-yellow-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-yellow-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 
                 >
                   Entrar
