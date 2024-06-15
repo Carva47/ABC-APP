@@ -9,6 +9,7 @@ import { UserPage } from '../pages/UserPage/index';
 import { UserProfile } from '../pages/ProfileUser/index';
 import { ConnectionsPage } from "../pages/ConnectioPage";
 import { NotificationsPage } from "../pages/NotificationPage";
+import { ChatsPage } from "../pages/ChatPage";
 
 function AppRoutes() {
     return(
@@ -23,6 +24,7 @@ function AppRoutes() {
                 <Route path="/profile" element={ < UserProfile /> }> </Route>
                 <Route path="/connections" element={ < ConnectionsPage /> }> </Route>
                 <Route path="/notification" element={ < NotificationsPage /> }> </Route>
+                <Route path="/messages" element={ < ChatsPage /> }> </Route>
                 <Route path="*" element={ < PageNotFound /> }> </Route>
             </Routes>
         </BrowserRouter>
