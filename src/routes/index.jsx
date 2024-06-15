@@ -7,6 +7,7 @@ import { SobreNos } from "../pages/SobreNos";
 import { Faqs } from "../pages/FAQs";
 import { UserPage } from '../pages/UserPage/index';
 import { UserProfile } from '../pages/ProfileUser/index';
+import { ConnectionsPage } from "../pages/ConnectioPage";
 
 function AppRoutes() {
     return(
@@ -19,6 +20,7 @@ function AppRoutes() {
                 <Route path="/login" element={ < Login /> }> </Route>
                 <Route path="/userpage" element={ < UserPage /> }> </Route>
                 <Route path="/profile" element={ < UserProfile /> }> </Route>
+                <Route path="/connections" element={ < ConnectionsPage /> }> </Route>
                 <Route path="*" element={ < PageNotFound /> }> </Route>
             </Routes>
         </BrowserRouter>

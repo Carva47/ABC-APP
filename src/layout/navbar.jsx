@@ -47,30 +47,30 @@ export function Navbar() {
                             </div>
                             <div className="text-xs mt-0 text-white">Home</div>
                         </Link>
-                        <li className="flex flex-col justify-center items-center cursor-pointer">
+                        <Link to="/connections" className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <FaUsers className="text-white" />
                             </div>
                             <div className="text-xs mt-0 text-white">Conexões</div>
-                        </li>
+                        </Link>
                         <li className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <FaPen className="text-white" />
                             </div>
                             <div className="text-xs mt-0 text-white">Posts</div>
                         </li>
-                        <li className="flex flex-col justify-center items-center cursor-pointer">
+                        <Link to="/messages" className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <FaEnvelope className="text-white" />
                             </div>
                             <div className="text-xs mt-0 text-white">Mensagem</div>
-                        </li>
-                        <li className="flex flex-col justify-center items-center cursor-pointer">
+                        </Link>
+                        <Link  to="/notification" className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <FaBell className="text-white" />
                             </div>
                             <div className="text-xs mt-0 text-white">Notificação</div>
-                        </li>
+                        </Link>
                        <Link to="/profile" className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <div className="w-5 h-5 rounded-full bg-gray-200">
@@ -99,30 +99,30 @@ export function Navbar() {
                             </div>
                             <div className="text-lg mt-0 text-white">Home</div>
                         </li>
-                        <li className="flex flex-col justify-center items-center space-y-2">
+                        <Link to="/connections" className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <FaUsers className="text-white text-4xl" />
                             </div>
                             <div className="text-lg mt-0 text-white">Conexões</div>
-                        </li>
+                        </Link>
                         <li className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <FaPen className="text-white text-4xl" />
                             </div>
                             <div className="text-lg mt-0 text-white">Posts</div>
                         </li>
-                        <li className="flex flex-col justify-center items-center space-y-2">
+                        <Link to="/messages" className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <FaEnvelope className="text-white text-4xl" />
                             </div>
                             <div className="text-lg mt-0 text-white">Mensagem</div>
-                        </li>
-                        <li className="flex flex-col justify-center items-center space-y-2">
+                        </Link>
+                        <Link to="/notification" className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <FaBell className="text-white text-4xl" />
                             </div>
                             <div className="text-lg mt-0 text-white">Notificação</div>
-                        </li>
+                        </Link>
                         <Link to="/profile" className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <div className="w-12 h-12 rounded-full bg-gray-200">
