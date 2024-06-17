@@ -1,9 +1,23 @@
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import styles from "./LoginPage.module.css";
 import { Logo } from "../../components/logo";
+import axios from 'axios';
 
 
 export function Login() {
+  const [email, setUserEmail ] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    axios.post('http://localhost:3001/login', { email, password })
+      .then(response => {
+        alert(response.data);
+      })
+      .catch(error => {
+        alert('Erro ao fazer login: ' + error.response.data);
+      });
+  };
     return (
       <>
       <section className={styles.containerLogin}>
@@ -29,6 +43,8 @@ export function Login() {
                     name="email"
                     type="email"
                     autoComplete="email"
+                    value={email}
+                    onChange={(e) => setUserEmail(e.target.value)}
                     required
                     className="block w-full font-bold rounded-md bg-gray-500 border-0 py-1.5 text-gray-900 shadow-sm ring-transparent placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
                   />
@@ -52,6 +68,8 @@ export function Login() {
                     name="password"
                     type="password"
                     autoComplete="current-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     className="block w-full font-bold rounded-md bg-gray-500 border-0 py-1.5 text-gray-900 shadow-sm  ring-transparent placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
                   />

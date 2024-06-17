@@ -1,9 +1,47 @@
 
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { Logo } from "../../components/logo";
 import styles from "./Register.module.css";
+import axios from 'axios';
+
 
 export function Register() {
+
+  const [gestorName, setGestorName] = useState('');
+  const [password, setPassword] = useState('');
+  const [nameCompany, setNameCompany] = useState('');
+  const [email, setEmail] = useState('');
+  const [province, setProvince] = useState('');
+  const [streetAddress, setStreetAddress] = useState('');
+  const [nifEmpresa, setNifEmpresa] = useState('');
+  const [actuacao, setActuacao] = useState('');
+  const [telefone, setTelefone] = useState('');
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    const user = {
+      gestorName,
+      password,
+      nameCompany,
+      email,
+      province,
+      streetAddress,
+      nifEmpresa,
+      actuacao,
+      telefone
+    };
+
+    axios.post('http://localhost:3001/register', user)
+      .then(response => {
+        alert(response.data);
+      })
+      .catch(error => {
+        alert('Erro ao registrar: ' + error.response.data);
+      });
+  };
+
   return (
     <>
     <section className={styles.containerLogin}>
@@ -27,6 +65,8 @@ export function Register() {
                   type="text"
                   name="gestorName"
                   id="gestorName"
+                  value={gestorName}
+                  onChange={(e) => setGestorName(e.target.value)}
                   required
                   autoComplete="given-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
@@ -42,6 +82,8 @@ export function Register() {
                   type="password"
                   name="password"
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   minLength={8}
                   autoComplete="family-name"
@@ -59,6 +101,8 @@ export function Register() {
                   type="text"
                   name="nameCompany"
                   id="nameCompany"
+                  value={nameCompany}
+                  onChange={(e) => setNameCompany(e.target.value)}
                   required
                   autoComplete="current-password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
@@ -74,6 +118,8 @@ export function Register() {
                     id="email"
                     name="email"
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     autoComplete="email"
                     required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
@@ -89,6 +135,8 @@ export function Register() {
                 <select
                   id="province"
                   name="province"
+                  value={province}
+                  onChange={(e) => setProvince(e.target.value)}
                   required
                   autoComplete="province-name"
                   className="block w-full rounded-md border-0 py-1.5 bg-transparent text-gray-900 shadow-sm focus:ring-transparent sm:max-w-xs sm:text-sm sm:leading-6"
@@ -110,6 +158,8 @@ export function Register() {
                   type="text"
                   name="streetAddress"
                   id="streetAddress"
+                  value={streetAddress}
+                  onChange={(e) => setStreetAddress(e.target.value)}
                   required
                   autoComplete="street-address"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
@@ -126,6 +176,8 @@ export function Register() {
                   type="text"
                   name="nifEmpresa"
                   id="nifEmpresa"
+                  value={nifEmpresa}
+                  onChange={(e) => setNifEmpresa(e.target.value)}
                   minLength={14}
                   maxLength={14}
                   required
@@ -144,6 +196,8 @@ export function Register() {
                   name="actuacao"
                   id="actuacao"
                   autoComplete="organization"
+                  value={actuacao}
+                  onChange={(e) => setActuacao(e.target.value)}
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
                 >
@@ -165,6 +219,8 @@ export function Register() {
                   type="tel"
                   name="telefone"
                   id="telefone"
+                  value={telefone}
+                  onChange={(e) => setTelefone(e.target.value)}
                   minLength={9}
                   maxLength={9}
                   autoComplete="tel-local"

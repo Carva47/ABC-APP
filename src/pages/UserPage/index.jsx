@@ -5,6 +5,7 @@ import Carex1 from "../../assets/img/carex.png";
 import CarexLogo from "../../assets/img/carex_logo.png";
 import { CreatePost } from '../../components/CreatePost/CreatePost';
 import { MainPost } from '../../components/MainPost/MainPost';
+import { Link } from 'react-router-dom';
 
 export function UserPage() {
 
@@ -38,7 +39,7 @@ export function UserPage() {
                     <div className="hr-line w-full h-px bg-gray-600 my-2"></div>
                    
                         <div className="flex justify-center text-blue-400 mb-2 px-2 hover:cursor-pointer">
-                            <span>Dashboard de Análise</span>
+                            <span><Link to="/dashboard">Dashboard de Análise </Link></span>
                                       
                     </div>
                 </div>
@@ -47,15 +48,20 @@ export function UserPage() {
                   <CreatePost />
                   <MainPost />
                 </div>
-
-                <div className="home-page-col-three bg-gray-800 rounded-md hidden lg:block w-full lg:w-1/5 h-96 p-4">
+                <div className="home-page-col-three bg-gray-800 rounded-md w-full lg:w-1/5 h-auto lg:h-96 p-4">
                     <div className="text-white text-lg font-bold mb-4">Filtrar Postagens</div>
                     <div className="flex flex-col space-y-2">
+                        <button className="py-2 px-4 rounded bg-gray-700 text-gray-300 hover:bg-blue-500 hover:text-white">
+                            Eventos
+                        </button>
                         <button className="py-2 px-4 rounded bg-gray-700 text-gray-300 hover:bg-blue-500 hover:text-white">
                             StartUp
                         </button>
                         <button className="py-2 px-4 rounded bg-gray-700 text-gray-300 hover:bg-blue-500 hover:text-white">
-                            Salas de Negócios
+                            Tecnologias
+                        </button>
+                        <button className="py-2 px-4 rounded bg-gray-700 text-gray-300 hover:bg-blue-500 hover:text-white">
+                            Importação
                         </button>
                     </div>
                 </div>

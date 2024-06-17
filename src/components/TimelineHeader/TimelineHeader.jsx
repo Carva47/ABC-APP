@@ -43,9 +43,9 @@ export default function TimelineHeader() {
               </div>
           </div>
           <div className="flex items-center space-x-2 mr-2">          
-            <button className=" px-1 py-2  h-9 bg-blue-500 rounded flex items-center justify-center focus:outline-none">
+            <Link to= "/dashboard" className=" px-1 py-2  h-9 bg-blue-500 rounded flex items-center justify-center focus:outline-none">
               < FaChartLine /> <span className="ml-1"> Dashboard</span>
-            </button>           
+            </Link>           
           </div>
         </div>
       </div>

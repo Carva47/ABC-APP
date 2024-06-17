@@ -53,12 +53,7 @@ export function Navbar() {
                             </div>
                             <div className="text-xs mt-0 text-white">Conexões</div>
                         </Link>
-                        <li className="flex flex-col justify-center items-center cursor-pointer">
-                            <div className="cursor-pointer">
-                                <FaPen className="text-white" />
-                            </div>
-                            <div className="text-xs mt-0 text-white">Posts</div>
-                        </li>
+                        
                         <Link to="/messages" className="flex flex-col justify-center items-center cursor-pointer">
                             <div className="cursor-pointer">
                                 <FaEnvelope className="text-white" />
@@ -105,12 +100,7 @@ export function Navbar() {
                             </div>
                             <div className="text-lg mt-0 text-white">Conexões</div>
                         </Link>
-                        <li className="flex flex-col justify-center items-center space-y-2">
-                            <div className="cursor-pointer">
-                                <FaPen className="text-white text-4xl" />
-                            </div>
-                            <div className="text-lg mt-0 text-white">Posts</div>
-                        </li>
+                        
                         <Link to="/messages" className="flex flex-col justify-center items-center space-y-2">
                             <div className="cursor-pointer">
                                 <FaEnvelope className="text-white text-4xl" />
