@@ -7,22 +7,22 @@ import { Link } from 'react-router-dom';
 const items = [
   {
     title: "Marketing",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, libero sequi odit dolore ab aliquam expedita vel suscipit vero, ipsam cupiditate eius doloribus est necessitatibus porro tempore repellendus rem hic.",
+    description: "Amplie sua presença de marca e conquiste novos mercados com estratégias inovadoras de marketing digital.",
     icon: FaMicrophone
   },
   {
     title: "Importação e Exportação",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, libero sequi odit dolore ab aliquam expedita vel suscipit vero, ipsam cupiditate eius doloribus est necessitatibus porro tempore repellendus rem hic.",
+    description: "Facilite suas transações globais com serviços de importação e exportação eficientes e seguros.",
     icon: FaTruck
   },
   {
     title: "Contabilidade",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, libero sequi odit dolore ab aliquam expedita vel suscipit vero, ipsam cupiditate eius doloribus est necessitatibus porro tempore repellendus rem hic.",
+    description: "Garanta uma gestão contábil precisa e confiável para um crescimento sustentável e compliance fiscal.",
     icon: FaMoneyBill
   },
   {
     title: "Tecnologia",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, libero sequi odit dolore ab aliquam expedita vel suscipit vero, ipsam cupiditate eius doloribus est necessitatibus porro tempore repellendus rem hic.",
+    description: "Adote soluções tecnológicas avançadas que impulsionam a eficiência e a competitividade do seu negócio.",
     icon: FaGlobe
   }
 ]
@@ -35,8 +35,8 @@ export function Home(){
       <section class="bg-white text-zinc-700">
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div class="mx-auto max-w-lg text-center">
-            <h2 class="text-3xl font-bold sm:text-4xl">Algo que chame atenção</h2>
-            <p class="mt-4 text-zinc-400 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus praesentium fuga dolorum amet alias. Animi adipisci recusandae, fuga iure, illo vero quae eum dolorem numquam alias dolor quaerat? Optio?</p>
+            <h2 class="text-3xl font-bold sm:text-4xl">Conectamos Empresas e Empreendedores</h2>
+            <p class="mt-4 text-zinc-400 text-sm">Transforme seu negócio conectando-se com os melhores provedores de serviços em marketing, tecnologia, importação e exportação, contabilidade e serviços jurídicos. Nossa plataforma facilita parcerias estratégicas, oferecendo acesso a recursos essenciais para impulsionar seu sucesso e inovação no mercado.</p>
           </div>
           <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {items.map((item,index)=>(
@@ -50,7 +50,7 @@ export function Home(){
             ))}
           </div>
           <div className='mt-12 text-center'>
-            <Link to="" class="inline-block rounded bg-slate-900 px-12 py-3 text-sm font-medium text-white transition">
+            <Link to="/login" class="inline-block rounded bg-slate-900 px-12 py-3 text-sm font-medium text-white transition">
               Ver mais
             </Link>
           </div>
