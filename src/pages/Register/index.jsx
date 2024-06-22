@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import styles from './Register.module.css';
-import sucessgif from '../../assets/img/icons8-sucesso.gif';
-import errogif from '../../assets/img/icons8-erro.gif';
+import styles from './Register.module.css'; // Estilos específicos para o componente
+import sucessgif from '../../assets/img/icons8-sucesso.gif'; // Imagem de sucesso
+import errogif from '../../assets/img/icons8-erro.gif'; // Imagem de erro
+
+// Importar os arquivos JSON para preencher os dados
+import provinciasData from '../../JSON/provincias.json';
+import areasAtuacaoData from '../../JSON/areasAtuacao.json';
 
 export function Register() {
+  // Estados para armazenar os dados do formulário e controle dos modais
   const [gestorName, setGestorName] = useState('');
   const [password, setPassword] = useState('');
   const [nameCompany, setNameCompany] = useState('');
@@ -15,16 +21,25 @@ export function Register() {
   const [nifEmpresa, setNifEmpresa] = useState('');
   const [actuacao, setActuacao] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false); // Estado para controlar exibição do modal de sucesso
+  const [showErrorModal, setShowErrorModal] = useState(false); // Estado para controlar exibição do modal de erro
 
+  // Função para fechar o modal de sucesso
   const handleCloseSuccessModal = () => setShowSuccessModal(false);
+
+  // Função para fechar o modal de erro
   const handleCloseErrorModal = () => setShowErrorModal(false);
 
+  useEffect(() => {
+    // Exemplo de uso: preencher um select com as províncias de Angola
+    console.log(provinciasData.provincias);
+  }, []);
 
+  // Função para lidar com o envio do formulário de registro
   const handleRegister = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Evita o comportamento padrão de submissão do formulário
 
+    // Objeto com os dados do usuário a serem enviados
     const user = {
       gestorName,
       password,
@@ -37,22 +52,22 @@ export function Register() {
       telefone
     };
 
+    // Requisição POST para o servidor com os dados do usuário
     axios.post('http://localhost:3001/register', user)
       .then(response => {
-        setShowSuccessModal(true);
+        setShowSuccessModal(true); // Exibe o modal de sucesso
         setTimeout(() => {
-          setShowSuccessModal(false);
+          setShowSuccessModal(false); // Fecha o modal de sucesso após 3 segundos
           // Aqui você pode redirecionar para a página de login ou fazer outra ação após o registro
-        }, 3000); // Fecha o modal após 3 segundos
+        }, 3000);
       })
       .catch(error => {
-        setShowErrorModal(true);
+        setShowErrorModal(true); // Exibe o modal de erro
         setTimeout(() => {
-          setShowErrorModal(false);
-        }, 2000); // Fecha o modal de erro após 2 segundos
+          setShowErrorModal(false); // Fecha o modal de erro após 2 segundos
+        }, 2000);
       });
   };
-
   return (
     <>
       <section className={styles.containerLogin}>
@@ -98,11 +113,11 @@ export function Register() {
                                     value={province} 
                                     onChange={(e) => setProvince(e.target.value)} 
                                     required autoComplete="address-level1" 
-                                    className="block w-full rounded-md border-0 py-1.5 bg-transparent text-gray-900 shadow-sm focus:ring-transparent sm:max-w-xs sm:text-sm sm:leading-6">
-                              <option> </option>
-                              <option>Luanda</option>
-                              <option>Benguela</option>
-                              <option>Uíge</option>
+                                    className="block w-full rounded-md border-0 py-1.5 bg-transparent text-white shadow-sm focus:ring-transparent sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option value=""></option>
+                            {provinciasData.provincias.map((prov, index) => (
+                              <option key={index} value={prov}>{prov}</option>
+                            ))}
                             </select>
                           </div>
                         </div>
@@ -144,12 +159,12 @@ export function Register() {
                                    onChange={(e) => setActuacao(e.target.value)} 
                                    required 
                                    autoComplete="off" 
-                                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
+                                   className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6"
                                    >
-                            <option> </option>
-                            <option>Tecnologia</option>
-                            <option>Marketing</option>
-                            <option>Finanças</option> 
+                             <option value=""></option>
+                            {areasAtuacaoData.areasAtuacao.map((area, index) => (
+                              <option key={index} value={area}>{area}</option>
+                            ))}
                             </select>
                           </div>
                         </div>
@@ -181,7 +196,7 @@ export function Register() {
                 </form>
                 <p className="mt-5 text-center text-sm text-white">
                   Já tens uma conta?{' '}
-                  <Link to="/" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Entre</Link>
+                  <Link to="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Entre</Link>
                 </p>
               </div>
             </div>
